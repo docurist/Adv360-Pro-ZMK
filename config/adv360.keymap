@@ -64,7 +64,7 @@
  &trans  &trans  &trans  &trans  &trans  &trans             &none                                                   &none  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans                  &trans  &trans   &none  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans   &trans   &trans   &trans
+ &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans          &kp C_VOL_UP   &kp C_VOL_DN   &trans   &trans   &trans
             >;
         };
 
