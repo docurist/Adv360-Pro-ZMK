@@ -35,7 +35,7 @@
         mcr_con_opal: mcr_con_opal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp S &kp H &kp SPACE &kp D &kp O &kp T &kp S &kp AT &kp O &kp P &kp A &kp L &kp D &kp N2 &kp DOT &kp O &kp P &kp A &kp L &kp S &kp T &kp A &kp C &kp K &kp DOT &kp C &kp O &kp M>;
+            bindings = <&kp LG(LC(LA(C)))>;
             label = "MCR_CON_OPAL";
         };
 
@@ -66,6 +66,20 @@
             bindings = <&kp LA(LC(LG(R)))>;
             label = "MCR_RAM_CHECK";
         };
+
+        opal_env_live: opal_env_live {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(LA(L)))>;
+            label = "OPAL_ENV_LIVE";
+        };
+
+        opal_env_stage: opal_env_stage {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(LG(S)))>;
+            label = "OPAL_ENV_STAGE";
+        };
     };
 
     keymap {
@@ -93,11 +107,11 @@
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2          &kp F3        &kp F4            &kp F5          &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8        &kp F9        &kp F10     &kp F11  &kp F12
-&trans  &mcr_psql_pipe  &mcr_dev_svr  &mcr_dev_loaders  &mcr_ram_check  &trans  &none                                       &none   &trans  &trans        &trans        &trans      &trans   &trans
-&trans  &trans          &trans        &trans            &trans          &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans        &trans        &trans      &trans   &trans
-&trans  &trans          &trans        &mcr_con_opal     &trans          &trans                  &trans      &trans                  &trans  &trans        &trans        &trans      &trans   &trans
-&trans  &trans          &trans        &trans            &trans                  &trans  &trans  &trans      &trans  &trans  &trans          &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &trans   &trans
+&kp F1  &kp F2          &kp F3           &kp F4            &kp F5          &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8        &kp F9        &kp F10         &kp F11  &kp F12
+&trans  &mcr_psql_pipe  &mcr_dev_svr     &mcr_dev_loaders  &mcr_ram_check  &trans  &none                                       &none   &trans  &trans        &trans        &trans          &trans   &trans
+&trans  &trans          &opal_env_stage  &trans            &trans          &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans        &trans        &opal_env_live  &trans   &trans
+&trans  &trans          &trans           &mcr_con_opal     &trans          &trans                  &trans      &trans                  &trans  &trans        &trans        &trans          &trans   &trans
+&trans  &trans          &trans           &trans            &trans                  &trans  &trans  &trans      &trans  &trans  &trans          &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE      &trans   &trans
             >;
         };
 
